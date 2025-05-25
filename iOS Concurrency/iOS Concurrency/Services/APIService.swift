@@ -28,7 +28,7 @@ struct APIService{
                 return
             }
             guard error == nil else {
-                completion(.failure(.dataTaskError))
+                completion(.failure(.dataTaskError(error!.localizedDescription)))
                 return
             }
             guard let data = data else {
@@ -44,7 +44,7 @@ struct APIService{
                 }
             }
             catch {
-                completion(.failure(.decodingError))
+                completion(.failure(.decodingError(error.localizedDescription)))
             }
             
             
@@ -55,11 +55,28 @@ struct APIService{
 }
 
 
-enum APIError: Error {
+enum APIError: Error, LocalizedError {
     case invalidURL
     case invalidResponseStatus
-    case dataTaskError
+    case dataTaskError(String)
     case corruptData
-    case decodingError
+    case decodingError(String)
     case networkError(Error)
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidURL:
+            return NSLocalizedString("Invalid URL", comment: "")
+        case .invalidResponseStatus:
+            return NSLocalizedString("Invalid response status", comment: "")
+        case .dataTaskError(let message):
+            return message
+        case .corruptData:
+            return NSLocalizedString("Corrupt data", comment: "")
+        case .decodingError(let String):
+            return String
+        case .networkError(let error):
+            return error.localizedDescription
+        }
+    }
 }

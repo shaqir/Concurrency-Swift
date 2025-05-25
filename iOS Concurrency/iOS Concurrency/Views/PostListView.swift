@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PostListView: View {
     
-    #warning("Its for testing mocking data only, remove this line in real app. ")
-    @StateObject var vm = PostListViewModel(forPreview: true)
+#warning("Its for testing mocking data only, remove this line in real app. ")
+    @StateObject var vm = PostListViewModel(forPreview: false)
     var userId: Int?
     
     var body: some View {
@@ -26,11 +26,9 @@ struct PostListView: View {
             .navigationTitle("Posts")
             .navigationBarTitleDisplayMode(.inline)
             .listStyle(.plain)
-            .onAppear(){
-                Task {
-                    vm.userId = userId
-                    vm.fetchPosts()
-                }
+            .task{
+                vm.userId = userId
+                await vm.fetchPosts()
             }
         }
     }

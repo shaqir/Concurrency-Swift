@@ -11,7 +11,7 @@ import SwiftUI
 struct UserListView: View {
     
     #warning("Remove preview from mockdata when using actual API.")
-    @StateObject var vm = UserListViewModel(forPreview: true)
+    @StateObject var vm = UserListViewModel(forPreview: false)
     
     var body: some View {
         NavigationView{
@@ -31,7 +31,7 @@ struct UserListView: View {
             .listStyle(.plain)
             .onAppear(){
                 Task {
-                    vm.fetchUsers()
+                    await vm.fetchUsers()
                 }
             }
         }

@@ -27,12 +27,20 @@ struct Post: Identifiable, Decodable {
 ### 2. **`PostService` (Networking Layer)**
 
 ```swift
-class PostService {
+class PostService: PostServiceProtocol {
+   
     func fetchPosts() async throws -> [Post] {
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode([Post].self, from: data)
-    }
+            let config = URLSessionConfiguration.default
+            config.waitsForConnectivity = true
+            config.timeoutIntervalForRequest = 15
+            let session = URLSession(configuration: config)
+
+            let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
+
+            let (data, _) = try await session.data(for: request)
+            return try JSONDecoder().decode([Post].self, from: data)
+        }
 }
 ```
 
@@ -51,18 +59,21 @@ class PostService {
 class PostViewModel: ObservableObject {
     @Published var posts: [Post] = []
     @Published var isLoading = false
-    @Published var errorMessage: String?
+    @Published var error: String?
 
-    private let service = PostService()
-    
+    private let service: PostServiceProtocol
+
+    init(service: PostServiceProtocol = PostService()) {
+        self.service = service
+    }
+
     func loadPosts() async {
         isLoading = true
-        errorMessage = nil
+        error = nil
         do {
-            let result = try await service.fetchPosts()
-            posts = result
+            posts = try await self.service.fetchPosts()
         } catch {
-            errorMessage = "Failed to load posts: \(error.localizedDescription)"
+            self.error = error.localizedDescription
         }
         isLoading = false
     }
@@ -81,33 +92,36 @@ class PostViewModel: ObservableObject {
 
 ```swift
 struct ContentView: View {
-    @StateObject private var viewModel = PostViewModel()
-    
+    @StateObject private var viewModel = PostViewModel(service: PostService())
+
     var body: some View {
         NavigationView {
-            Group {
-                if viewModel.isLoading {
-                    ProgressView("Loading...")
-                } else if let error = viewModel.errorMessage {
-                    Text(error)
-                        .foregroundColor(.red)
-                } else {
-                    List(viewModel.posts) { post in
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(post.title)
-                                .font(.headline)
-                            Text(post.body)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                        }
-                        .padding(.vertical, 8)
-                    }
-                }
-            }
-            .navigationTitle("Posts")
+            content
+                .navigationTitle("Async Posts")
         }
         .task {
             await viewModel.loadPosts()
+        }
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        if viewModel.isLoading {
+            ProgressView("Loading...")
+        } else if let errorMessage = viewModel.error {
+            VStack {
+                Text(errorMessage).foregroundColor(.red)
+                Button("Retry") {
+                    Task { await viewModel.loadPosts() }
+                }
+            }
+        } else {
+            List(viewModel.posts) { post in
+                VStack(alignment: .leading) {
+                    Text(post.title).font(.headline)
+                    Text(post.body).font(.subheadline)
+                }
+            }
         }
     }
 }

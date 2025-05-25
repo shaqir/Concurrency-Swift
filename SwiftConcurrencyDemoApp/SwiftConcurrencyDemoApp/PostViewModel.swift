@@ -11,18 +11,21 @@ import Foundation
 class PostViewModel: ObservableObject {
     @Published var posts: [Post] = []
     @Published var isLoading = false
-    @Published var errorMessage: String?
+    @Published var error: String?
 
-    private let service = PostService()
-    
+    private let service: PostServiceProtocol
+
+    init(service: PostServiceProtocol = PostService()) {
+        self.service = service
+    }
+
     func loadPosts() async {
         isLoading = true
-        errorMessage = nil
+        error = nil
         do {
-            let result = try await service.fetchPosts()
-            posts = result
+            posts = try await self.service.fetchPosts()
         } catch {
-            errorMessage = "Failed to load posts: \(error.localizedDescription)"
+            self.error = error.localizedDescription
         }
         isLoading = false
     }

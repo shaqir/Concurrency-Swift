@@ -7,12 +7,19 @@
 import Foundation
 
 //Purpose: Handles the API request and decoding.
-class PostService {
-    
+
+class PostService: PostServiceProtocol {
+   
     func fetchPosts() async throws -> [Post] {
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode([Post].self, from: data)
-    }
-    
+            let config = URLSessionConfiguration.default
+            config.waitsForConnectivity = true
+            config.timeoutIntervalForRequest = 15
+            let session = URLSession(configuration: config)
+
+            let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
+
+            let (data, _) = try await session.data(for: request)
+            return try JSONDecoder().decode([Post].self, from: data)
+        }
 }

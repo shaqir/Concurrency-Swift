@@ -6,27 +6,8 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		DF68E5392DE29F2A009A2A6E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DF68E5232DE29F29009A2A6E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DF68E52A2DE29F29009A2A6E;
-			remoteInfo = SwiftConcurrencyDemoApp;
-		};
-		DF68E5432DE29F2A009A2A6E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DF68E5232DE29F29009A2A6E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DF68E52A2DE29F29009A2A6E;
-			remoteInfo = SwiftConcurrencyDemoApp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		DF68E52B2DE29F29009A2A6E /* SwiftConcurrencyDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF68E5382DE29F2A009A2A6E /* SwiftConcurrencyDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF68E5422DE29F2A009A2A6E /* SwiftConcurrencyDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,34 +16,10 @@
 			path = SwiftConcurrencyDemoApp;
 			sourceTree = "<group>";
 		};
-		DF68E53B2DE29F2A009A2A6E /* SwiftConcurrencyDemoAppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SwiftConcurrencyDemoAppTests;
-			sourceTree = "<group>";
-		};
-		DF68E5452DE29F2A009A2A6E /* SwiftConcurrencyDemoAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SwiftConcurrencyDemoAppUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DF68E5282DE29F29009A2A6E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DF68E5352DE29F2A009A2A6E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DF68E53F2DE29F2A009A2A6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				DF68E52D2DE29F29009A2A6E /* SwiftConcurrencyDemoApp */,
-				DF68E53B2DE29F2A009A2A6E /* SwiftConcurrencyDemoAppTests */,
-				DF68E5452DE29F2A009A2A6E /* SwiftConcurrencyDemoAppUITests */,
 				DF68E52C2DE29F29009A2A6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				DF68E52B2DE29F29009A2A6E /* SwiftConcurrencyDemoApp.app */,
-				DF68E5382DE29F2A009A2A6E /* SwiftConcurrencyDemoAppTests.xctest */,
-				DF68E5422DE29F2A009A2A6E /* SwiftConcurrencyDemoAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,52 +70,6 @@
 			productReference = DF68E52B2DE29F29009A2A6E /* SwiftConcurrencyDemoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DF68E5372DE29F2A009A2A6E /* SwiftConcurrencyDemoAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DF68E54F2DE29F2A009A2A6E /* Build configuration list for PBXNativeTarget "SwiftConcurrencyDemoAppTests" */;
-			buildPhases = (
-				DF68E5342DE29F2A009A2A6E /* Sources */,
-				DF68E5352DE29F2A009A2A6E /* Frameworks */,
-				DF68E5362DE29F2A009A2A6E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DF68E53A2DE29F2A009A2A6E /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DF68E53B2DE29F2A009A2A6E /* SwiftConcurrencyDemoAppTests */,
-			);
-			name = SwiftConcurrencyDemoAppTests;
-			packageProductDependencies = (
-			);
-			productName = SwiftConcurrencyDemoAppTests;
-			productReference = DF68E5382DE29F2A009A2A6E /* SwiftConcurrencyDemoAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DF68E5412DE29F2A009A2A6E /* SwiftConcurrencyDemoAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DF68E5522DE29F2A009A2A6E /* Build configuration list for PBXNativeTarget "SwiftConcurrencyDemoAppUITests" */;
-			buildPhases = (
-				DF68E53E2DE29F2A009A2A6E /* Sources */,
-				DF68E53F2DE29F2A009A2A6E /* Frameworks */,
-				DF68E5402DE29F2A009A2A6E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DF68E5442DE29F2A009A2A6E /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DF68E5452DE29F2A009A2A6E /* SwiftConcurrencyDemoAppUITests */,
-			);
-			name = SwiftConcurrencyDemoAppUITests;
-			packageProductDependencies = (
-			);
-			productName = SwiftConcurrencyDemoAppUITests;
-			productReference = DF68E5422DE29F2A009A2A6E /* SwiftConcurrencyDemoAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,14 +82,6 @@
 				TargetAttributes = {
 					DF68E52A2DE29F29009A2A6E = {
 						CreatedOnToolsVersion = 16.3;
-					};
-					DF68E5372DE29F2A009A2A6E = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = DF68E52A2DE29F29009A2A6E;
-					};
-					DF68E5412DE29F2A009A2A6E = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = DF68E52A2DE29F29009A2A6E;
 					};
 				};
 			};
@@ -201,28 +100,12 @@
 			projectRoot = "";
 			targets = (
 				DF68E52A2DE29F29009A2A6E /* SwiftConcurrencyDemoApp */,
-				DF68E5372DE29F2A009A2A6E /* SwiftConcurrencyDemoAppTests */,
-				DF68E5412DE29F2A009A2A6E /* SwiftConcurrencyDemoAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DF68E5292DE29F29009A2A6E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DF68E5362DE29F2A009A2A6E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DF68E5402DE29F2A009A2A6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,34 +122,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF68E5342DE29F2A009A2A6E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DF68E53E2DE29F2A009A2A6E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DF68E53A2DE29F2A009A2A6E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DF68E52A2DE29F29009A2A6E /* SwiftConcurrencyDemoApp */;
-			targetProxy = DF68E5392DE29F2A009A2A6E /* PBXContainerItemProxy */;
-		};
-		DF68E5442DE29F2A009A2A6E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DF68E52A2DE29F29009A2A6E /* SwiftConcurrencyDemoApp */;
-			targetProxy = DF68E5432DE29F2A009A2A6E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DF68E54A2DE29F2A009A2A6E /* Debug */ = {
@@ -442,74 +298,6 @@
 			};
 			name = Release;
 		};
-		DF68E5502DE29F2A009A2A6E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosRoadMapDemos.SwiftConcurrencyDemoAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftConcurrencyDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftConcurrencyDemoApp";
-			};
-			name = Debug;
-		};
-		DF68E5512DE29F2A009A2A6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosRoadMapDemos.SwiftConcurrencyDemoAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftConcurrencyDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftConcurrencyDemoApp";
-			};
-			name = Release;
-		};
-		DF68E5532DE29F2A009A2A6E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosRoadMapDemos.SwiftConcurrencyDemoAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftConcurrencyDemoApp;
-			};
-			name = Debug;
-		};
-		DF68E5542DE29F2A009A2A6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosRoadMapDemos.SwiftConcurrencyDemoAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftConcurrencyDemoApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,24 +315,6 @@
 			buildConfigurations = (
 				DF68E54D2DE29F2A009A2A6E /* Debug */,
 				DF68E54E2DE29F2A009A2A6E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DF68E54F2DE29F2A009A2A6E /* Build configuration list for PBXNativeTarget "SwiftConcurrencyDemoAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DF68E5502DE29F2A009A2A6E /* Debug */,
-				DF68E5512DE29F2A009A2A6E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DF68E5522DE29F2A009A2A6E /* Build configuration list for PBXNativeTarget "SwiftConcurrencyDemoAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DF68E5532DE29F2A009A2A6E /* Debug */,
-				DF68E5542DE29F2A009A2A6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

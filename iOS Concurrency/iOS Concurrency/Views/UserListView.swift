@@ -10,19 +10,19 @@ import SwiftUI
 
 struct UserListView: View {
     
-    #warning("Remove preview from mockdata when using actual API.")
-    @StateObject var vm = UserListViewModel(forPreview: false)
+    @StateObject var vm = UserListViewModel()
     
     var body: some View {
         NavigationView{
             List{
-                ForEach(vm.users){ user in
+                ForEach(vm.usersAndPosts){ userAndPosts in
                     
-                    NavigationLink(destination: PostListView(userId: user.id)) {
+                    NavigationLink(destination: PostListView(posts: userAndPosts.posts)) {
                         VStack(alignment: .leading)
                         {
-                            Text(user.name).font(.title)
-                            Text(user.email)
+                            Text(userAndPosts.user.name).font(.title)
+                            Spacer()
+                            Text("\(userAndPosts.numberofPosts)")
                         }
                     }
                 }

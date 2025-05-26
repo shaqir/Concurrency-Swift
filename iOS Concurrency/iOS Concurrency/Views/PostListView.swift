@@ -10,12 +10,10 @@ import SwiftUI
 struct PostListView: View {
     
 #warning("Its for testing mocking data only, remove this line in real app. ")
-    @StateObject var vm = PostListViewModel(forPreview: false)
-    var userId: Int?
-    
+    var posts: [Post]
     var body: some View {
         List{
-            ForEach(vm.posts){ post in
+            ForEach(posts){ post in
                 VStack(alignment: .leading)
                 {
                     Text(post.title).font(.headline)
@@ -26,16 +24,13 @@ struct PostListView: View {
             .navigationTitle("Posts")
             .navigationBarTitleDisplayMode(.inline)
             .listStyle(.plain)
-            .task{
-                vm.userId = userId
-                await vm.fetchPosts()
-            }
+             
         }
     }
 }
 
 #Preview {
     NavigationView{
-        PostListView(userId: 1)
+        PostListView(posts: Post.mockSingleUserPostArray)
     }
 }

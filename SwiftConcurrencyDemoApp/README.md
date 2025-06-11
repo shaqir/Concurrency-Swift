@@ -1,10 +1,5 @@
-# Swift Concurrency Demo App
 
-Absolutely! Here's a **complete breakdown** of the Swift Concurrency example with **detailed explanations for each class and concept**, followed by a professional, easy-to-read `README.md` file tailored for the demo.
-
----
-
-## 🔍 **Explanation of Each Class & Concept**
+## **Explanation of Each Class & Concept**
 
 ---
 
@@ -180,15 +175,7 @@ This project demonstrates how to use **Swift Concurrency** (`async/await`) in **
 
 ---
 
-## 🧪 Run the Project
-
-1. Open **Xcode** → New SwiftUI Project.
-2. Copy the files or paste the code into the appropriate files.
-3. Run in **iOS Simulator**.
-
----
-
-## 🧠 Concepts Covered
+##  Concepts Covered
 
 - `@MainActor` → Ensures ViewModel updates are thread-safe.
 - `async/await` → Clean handling of background operations.
@@ -197,13 +184,13 @@ This project demonstrates how to use **Swift Concurrency** (`async/await`) in **
 
 ---
 
-## 🌐 API Source
+## API Source
 
 - [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
 
 ---
 
-## 📌 Requirements
+## Requirements
 
 - Xcode 13+
 - iOS 15+

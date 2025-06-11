@@ -26,5 +26,7 @@ A modern SwiftUI demo project showcasing Swift Concurrency (`async/await`) with 
 - Xcode 14 or later
 - iOS 15+
 
+# a visual flow chart showing both the Swift Concurrency and Combine pipelines in your demo app, side by side:
+
 <img width="404" alt="BothPath" src="https://github.com/user-attachments/assets/15aa7b50-4866-4ff4-afbe-6c57cba7a819" />
 

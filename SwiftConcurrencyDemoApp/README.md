@@ -13,7 +13,7 @@ struct Post: Identifiable, Decodable {
 }
 ```
 
-* **Purpose**: Represents a single post fetched from the API.
+* **`Purpose`**: Represents a single post fetched from the API.
 * **`Identifiable`**: Makes it usable in SwiftUI `List`.
 * **`Decodable`**: Allows it to be constructed from JSON using `JSONDecoder`.
 
@@ -39,7 +39,7 @@ class PostService: PostServiceProtocol {
 }
 ```
 
-* **Purpose**: Handles the API request and decoding.
+* **`Purpose`**: Handles the API request and decoding.
 * **`async throws`**: The function is asynchronous and can throw an error.
 * **`await`**: Suspends execution until the async call returns.
 * **`URLSession.shared.data(from:)`**: Asynchronously fetches data from the internet.
@@ -75,7 +75,7 @@ class PostViewModel: ObservableObject {
 }
 ```
 
-* **Purpose**: Acts as the glue between the service and the SwiftUI view.
+* **`Purpose`**: Acts as the glue between the service and the SwiftUI view.
 * **`@MainActor`**: Ensures all UI updates happen on the main thread.
 * **`@Published`**: Automatically notifies the SwiftUI view when values change.
 * **`ObservableObject`**: Lets SwiftUI observe the state and re-render views on changes.
@@ -122,84 +122,7 @@ struct ContentView: View {
 }
 ```
 
-* **Purpose**: Displays the UI based on ViewModel state.
+* **`Purpose`**: Displays the UI based on ViewModel state.
 * **`@StateObject`**: Creates and observes a single instance of the ViewModel.
 * **`NavigationView` + `List`**: Structured UI for displaying the list of posts.
 * **`.task {}`**: A SwiftUI modifier to run async code when the view appears.
-
----
-
-## 📘 README.md for the Project
-
-```markdown
-# 📱 SwiftUI Concurrency Demo - Fetching Posts Asynchronously
-
-This project demonstrates how to use **Swift Concurrency** (`async/await`) in **SwiftUI** to fetch and display data from a REST API.
-
----
-
-## 🚀 Features
-
-- ✅ Uses `async/await` for asynchronous networking
-- ✅ Loads and decodes JSON from `jsonplaceholder.typicode.com`
-- ✅ Updates the UI with SwiftUI and MVVM architecture
-- ✅ Includes error handling and loading state
-- ✅ All updates happen on the main thread safely using `@MainActor`
-
----
-
-## 🧠 Technologies
-
-- **SwiftUI**
-- **Swift Concurrency (`async/await`)**
-- **MVVM (Model-View-ViewModel)**
-- **URLSession**
-- **JSON Decoding**
-
----
-
-📦 SwiftConcurrencyDemo  
-┣ 📄 ContentView.swift        – SwiftUI View  
-┣ 📄 Post.swift               – Data Model (Decodable)  
-┣ 📄 PostService.swift        – Networking Layer (Async)  
-┗ 📄 PostViewModel.swift      – ObservableObject (ViewModel)  
-
-
----
-
-## 🧵 How Concurrency is Used
-
-- `PostService.fetchPosts()` uses `await` to fetch data using `URLSession`.
-- The ViewModel calls `fetchPosts()` in an `async` context and publishes state.
-- SwiftUI’s `.task {}` modifier triggers loading as soon as the view appears.
-
----
-
-##  Concepts Covered
-
-- `@MainActor` → Ensures ViewModel updates are thread-safe.
-- `async/await` → Clean handling of background operations.
-- `@Published` and `ObservableObject` → Live UI updates.
-- `.task {}` → Async code trigger in SwiftUI.
-
----
-
-## API Source
-
-- [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
-
----
-
-## Requirements
-
-- Xcode 13+
-- iOS 15+
-- Swift 5.5+
-
----
-
-## 📸 Demo
-
-Displays a list of blog post titles and body text from a placeholder API.
-
----

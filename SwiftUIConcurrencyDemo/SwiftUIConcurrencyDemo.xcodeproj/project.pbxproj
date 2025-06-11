@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		DF85EEA32DE385E30012C4AC /* iOS Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Concurrency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF676CDE2DF90BF200291127 /* SwiftUIConcurrencyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIConcurrencyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DF85EEA52DE385E30012C4AC /* iOS Concurrency */ = {
+		DF676CE02DF90BF200291127 /* SwiftUIConcurrencyDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "iOS Concurrency";
+			path = SwiftUIConcurrencyDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DF85EEA02DE385E30012C4AC /* Frameworks */ = {
+		DF676CDB2DF90BF200291127 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DF85EE9A2DE385E30012C4AC = {
+		DF676CD52DF90BF200291127 = {
 			isa = PBXGroup;
 			children = (
-				DF85EEA52DE385E30012C4AC /* iOS Concurrency */,
-				DF85EEA42DE385E30012C4AC /* Products */,
+				DF676CE02DF90BF200291127 /* SwiftUIConcurrencyDemo */,
+				DF676CDF2DF90BF200291127 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DF85EEA42DE385E30012C4AC /* Products */ = {
+		DF676CDF2DF90BF200291127 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF85EEA32DE385E30012C4AC /* iOS Concurrency.app */,
+				DF676CDE2DF90BF200291127 /* SwiftUIConcurrencyDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DF85EEA22DE385E30012C4AC /* iOS Concurrency */ = {
+		DF676CDD2DF90BF200291127 /* SwiftUIConcurrencyDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF85EEAE2DE385E50012C4AC /* Build configuration list for PBXNativeTarget "iOS Concurrency" */;
+			buildConfigurationList = DF676CE92DF90BF300291127 /* Build configuration list for PBXNativeTarget "SwiftUIConcurrencyDemo" */;
 			buildPhases = (
-				DF85EE9F2DE385E30012C4AC /* Sources */,
-				DF85EEA02DE385E30012C4AC /* Frameworks */,
-				DF85EEA12DE385E30012C4AC /* Resources */,
+				DF676CDA2DF90BF200291127 /* Sources */,
+				DF676CDB2DF90BF200291127 /* Frameworks */,
+				DF676CDC2DF90BF200291127 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DF85EEA52DE385E30012C4AC /* iOS Concurrency */,
+				DF676CE02DF90BF200291127 /* SwiftUIConcurrencyDemo */,
 			);
-			name = "iOS Concurrency";
+			name = SwiftUIConcurrencyDemo;
 			packageProductDependencies = (
 			);
-			productName = "iOS Concurrency";
-			productReference = DF85EEA32DE385E30012C4AC /* iOS Concurrency.app */;
+			productName = SwiftUIConcurrencyDemo;
+			productReference = DF676CDE2DF90BF200291127 /* SwiftUIConcurrencyDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DF85EE9B2DE385E30012C4AC /* Project object */ = {
+		DF676CD62DF90BF200291127 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1630;
-				LastUpgradeCheck = 1630;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					DF85EEA22DE385E30012C4AC = {
-						CreatedOnToolsVersion = 16.3;
+					DF676CDD2DF90BF200291127 = {
+						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = DF85EE9E2DE385E30012C4AC /* Build configuration list for PBXProject "iOS Concurrency" */;
+			buildConfigurationList = DF676CD92DF90BF200291127 /* Build configuration list for PBXProject "SwiftUIConcurrencyDemo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = DF85EE9A2DE385E30012C4AC;
+			mainGroup = DF676CD52DF90BF200291127;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = DF85EEA42DE385E30012C4AC /* Products */;
+			productRefGroup = DF676CDF2DF90BF200291127 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DF85EEA22DE385E30012C4AC /* iOS Concurrency */,
+				DF676CDD2DF90BF200291127 /* SwiftUIConcurrencyDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DF85EEA12DE385E30012C4AC /* Resources */ = {
+		DF676CDC2DF90BF200291127 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DF85EE9F2DE385E30012C4AC /* Sources */ = {
+		DF676CDA2DF90BF200291127 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		DF85EEAC2DE385E50012C4AC /* Debug */ = {
+		DF676CE72DF90BF300291127 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -177,7 +177,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		DF85EEAD2DE385E50012C4AC /* Release */ = {
+		DF676CE82DF90BF300291127 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -244,7 +244,7 @@
 			};
 			name = Release;
 		};
-		DF85EEAF2DE385E50012C4AC /* Debug */ = {
+		DF676CEA2DF90BF300291127 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -263,17 +263,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iosRoadMapDemos.iOS-Concurrency";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosRoadMapDemos.SwiftUIConcurrencyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_GLOBAL_CONCURRENCY = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				_EXPERIMENTAL_SWIFT_EXPLICIT_MODULES = YES;
 			};
 			name = Debug;
 		};
-		DF85EEB02DE385E50012C4AC /* Release */ = {
+		DF676CEB2DF90BF300291127 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -292,38 +290,36 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iosRoadMapDemos.iOS-Concurrency";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosRoadMapDemos.SwiftUIConcurrencyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_GLOBAL_CONCURRENCY = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				_EXPERIMENTAL_SWIFT_EXPLICIT_MODULES = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DF85EE9E2DE385E30012C4AC /* Build configuration list for PBXProject "iOS Concurrency" */ = {
+		DF676CD92DF90BF200291127 /* Build configuration list for PBXProject "SwiftUIConcurrencyDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF85EEAC2DE385E50012C4AC /* Debug */,
-				DF85EEAD2DE385E50012C4AC /* Release */,
+				DF676CE72DF90BF300291127 /* Debug */,
+				DF676CE82DF90BF300291127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF85EEAE2DE385E50012C4AC /* Build configuration list for PBXNativeTarget "iOS Concurrency" */ = {
+		DF676CE92DF90BF300291127 /* Build configuration list for PBXNativeTarget "SwiftUIConcurrencyDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF85EEAF2DE385E50012C4AC /* Debug */,
-				DF85EEB02DE385E50012C4AC /* Release */,
+				DF676CEA2DF90BF300291127 /* Debug */,
+				DF676CEB2DF90BF300291127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DF85EE9B2DE385E30012C4AC /* Project object */;
+	rootObject = DF676CD62DF90BF200291127 /* Project object */;
 }

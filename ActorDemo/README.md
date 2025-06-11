@@ -37,8 +37,9 @@ And then called await or .async tasks like:
 - Swift automatically ensures no two tasks access mutable state at once.
 - Cleaner code: no need for DispatchQueue, NSLock, or manual synchronization.
 
-Structs are immutable — not useful for this.
-Classes are not thread-safe — risky.
+~ **Structs** are immutable — not useful for this.
+~ **Classes** are not thread-safe — risky.
+
 **Actors** are the best fit: they give you shared mutable state with safe, isolated access in concurrent environments.
 
 ## Use actor when:

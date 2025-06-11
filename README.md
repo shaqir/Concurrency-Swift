@@ -1,5 +1,30 @@
 # Concurrency-Swift
 
+**Swift Concurrency topics**:
+
+1. `async` / `await`
+2. `Task`
+3. `async let`
+4. `TaskGroup` / `ThrowingTaskGroup`
+5. `actor`
+6. `@MainActor`
+7. `nonisolated`
+8. Global actors
+9. `withCheckedContinuation` / `withUnsafeContinuation`
+10. `Task.detached`
+11. Task cancellation
+12. Sendable and `@Sendable`
+13. Reentrancy
+14. Structured concurrency
+15. Unstructured concurrency
+16. MainActor.run
+17. SwiftUI + Concurrency (`.task`, `.refreshable`, etc.)
+18. Testing async code
+19. Concurrency debugging tools
+20. Distributed actors (advanced)
+21. Back deployment support for concurrency
+
+
 **Swift Concurrency topics**
 
 ---

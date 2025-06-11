@@ -1,10 +1,11 @@
 # SwiftUIConcurrencyDemo
 
-A modern SwiftUI demo project showcasing Swift Concurrency (`async/await`) with MVVM architecture, offline caching, image loading, and smooth UI updates.
+A modern SwiftUI demo project showcasing Swift Concurrency (`async/await`) with MVVM architecture, offline caching, image loading, and smooth UI updates, it also used combine framework (light) with some operatos.
 
 ## Features
 
 - Swift Concurrency (`async/await`, `Task`, cancellation)
+- Combine Framework 
 - MVVM architecture
 - Networking using `URLSession`
 - Offline caching with `FileManager`
